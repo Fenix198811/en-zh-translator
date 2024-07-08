@@ -1,6 +1,6 @@
 1. Overall Introduction:
 
-This is a repo written during LLM machine learning self study. It use the transfomer with attention model to train English-Chinese pair data and do sentence translation from English to Chinese.
+This is a repo written during LLM machine learning self study. It uses the transfomer with attention model to train English-Chinese pair data and does sentence translation from English to Chinese.
 
 
 2. Repo Structure:
