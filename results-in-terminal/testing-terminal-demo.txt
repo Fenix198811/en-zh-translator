@@ -1,0 +1,20 @@
+Enter the English you want to translate into Chinese:
+I am a programmer in Shanghai.
+Your translation result in Chinese:
+['我', '是', '个', '怪人', '。']
+Enter the English you want to translate into Chinese:
+My birthday is in November.
+Your translation result in Chinese:
+['我', '的', '生日', '是', '个', '好', '。']
+Enter the English you want to translate into Chinese:
+I am a student in machine learning area.
+Your translation result in Chinese:
+['我', '正在', '在', '个', '高中生', '。']
+Enter the English you want to translate into Chinese:
+I like blue.
+Your translation result in Chinese:
+['我', '喜欢', '蓝色', '。']
+Enter the English you want to translate into Chinese:
+I am so proud of myself.
+Your translation result in Chinese:
+['我', '对', '自己', '感到', '骄傲', '。']

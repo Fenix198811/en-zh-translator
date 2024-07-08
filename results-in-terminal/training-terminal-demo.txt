@@ -1,0 +1,76 @@
+Transformer(
+  (encoder): Encoder(
+    (tok_embedding): Embedding(7594, 512)
+    (pos_embedding): Embedding(100, 512)
+    (layers): ModuleList(
+      (0-5): 6 x EncoderLayer(
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=512, out_features=512, bias=True)
+          (fc_k): Linear(in_features=512, out_features=512, bias=True)
+          (fc_v): Linear(in_features=512, out_features=512, bias=True)
+          (fc_o): Linear(in_features=512, out_features=512, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=512, out_features=1024, bias=True)
+          (fc_2): Linear(in_features=1024, out_features=512, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (decoder): Decoder(
+    (tok_embedding): Embedding(10863, 512)
+    (pos_embedding): Embedding(100, 512)
+    (layers): ModuleList(
+      (0-5): 6 x DecoderLayer(
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (enc_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (ff_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (self_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=512, out_features=512, bias=True)
+          (fc_k): Linear(in_features=512, out_features=512, bias=True)
+          (fc_v): Linear(in_features=512, out_features=512, bias=True)
+          (fc_o): Linear(in_features=512, out_features=512, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (encoder_attention): MultiHeadAttentionLayer(
+          (fc_q): Linear(in_features=512, out_features=512, bias=True)
+          (fc_k): Linear(in_features=512, out_features=512, bias=True)
+          (fc_v): Linear(in_features=512, out_features=512, bias=True)
+          (fc_o): Linear(in_features=512, out_features=512, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (positionwise_feedforward): PositionwiseFeedforwardLayer(
+          (fc_1): Linear(in_features=512, out_features=1024, bias=True)
+          (fc_2): Linear(in_features=1024, out_features=512, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (fc_out): Linear(in_features=512, out_features=10863, bias=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+# of trainable params: 46,668,399
+# of non-trainable params: 0
+Epoch: 01 | Time: 1m 41s
+        Train Loss: 3.780 | Train PPL:  43.817
+         Val. Loss: 3.239 |  Val. PPL:  25.511
+Epoch: 02 | Time: 2m 40s
+        Train Loss: 2.462 | Train PPL:  11.734
+         Val. Loss: 2.793 |  Val. PPL:  16.332
+Epoch: 03 | Time: 1m 54s
+        Train Loss: 1.815 | Train PPL:   6.142
+         Val. Loss: 2.684 |  Val. PPL:  14.651
+Epoch: 04 | Time: 2m 29s
+        Train Loss: 1.364 | Train PPL:   3.913
+         Val. Loss: 2.686 |  Val. PPL:  14.673
+Epoch: 05 | Time: 2m 7s
+        Train Loss: 1.029 | Train PPL:   2.799
+         Val. Loss: 2.727 |  Val. PPL:  15.294

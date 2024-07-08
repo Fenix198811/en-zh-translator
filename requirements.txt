@@ -1,0 +1,8 @@
+torch
+numpy
+tqdm
+spacy
+torchtext
+torchdata
+portalocker>=2.0.0
+matplotlib
